@@ -1,7 +1,6 @@
-
 :root {
- 
-  --ff-primary:"red hat display", sans-serif;
+
+  --ff-primary: "red hat display", sans-serif;
   /***Bg Colors***/
   --clr-primary-100: hsl(234, 100%, 98%);
   /*pale blue bg color*/
@@ -34,115 +33,121 @@ body {
   border-radius: 13px;
   display: inline-block;
 
-  .image {
-    border-radius: 13px 13px 0 0;
-    width: 100%;
+  .banner {
+    .image {
+      border-radius: 13px 13px 0 0;
+      width: 100%;
+    }
   }
 
-  .header {
-    color: var(--clr-neutral-300);
-    text-align: center;
-    margin: 0 auto 0 auto;
-    width: 80%;
-  }
-
-  .header p {
-    line-height: 24px;
-    font-size: 15px;
-  }
-  
-  h1 {
-    color: var(--clr-neutral-600);
-    font-weight: 800;
-    font-size: 18px;
-  }
-
-
-}
-
-
-
-
-
-
-
-.annual-plan {
-  background: var(--clr-primary-100);
-  border-radius: 13px;
-  margin: 7% 10%;
-  height: 75px;
-  width: 80%;
-  display: flex;
-  justify-content: space-between;
-
-  .container {
-    width: 100%;
-    margin: auto;
-
-    img {
-      width: 43px;
-      height: 43px;
+  .navigation {
+    .header {
+      color: var(--clr-neutral-300);
+      text-align: center;
+      margin: 0 auto 0 auto;
+      width: 80%;
     }
 
-    h2 {
-      margin-bottom: 3px;
-      font-size: 11px;
+    .header p {
+      line-height: 24px;
+      font-size: 15px;
+    }
+
+    h1 {
       color: var(--clr-neutral-600);
       font-weight: 800;
-      float: left;
+      font-size: 18px;
+    }
+  }
+
+
+
+}
+
+
+
+.main {
+  .annual-plan {
+    background: var(--clr-primary-100);
+    border-radius: 13px;
+    margin: 7% 10%;
+    height: 75px;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+
+    .container {
+      width: 100%;
+      margin: auto;
+
+      img {
+        width: 43px;
+        height: 43px;
+      }
+
+      h2 {
+        margin-bottom: 3px;
+        font-size: 11px;
+        color: var(--clr-neutral-600);
+        font-weight: 800;
+        float: left;
+      }
+
+      p {
+        color: var(--clr-neutral-300);
+        font-weight: 550;
+        font-size: 13px;
+        margin-top: 3px;
+        float: left;
+      }
+
+      a {
+        font-size: 11px;
+        font-weight: 600;
+      }
     }
 
-    p {
-      color: var(--clr-neutral-300);
-      font-weight: 550;
-      font-size: 13px;
-      margin-top: 3px;
-      float: left;
-    }
+
+  }
+
+  .payment-button {
+    background-color: var(--clr-primary-500);
+    border-radius: 8px;
+    border: none;
+    padding: 12px 0;
+    box-shadow: 0px 15px 25px #b0bad9;
+    width: 80%;
+    margin: auto;
 
     a {
-      font-size: 11px;
-      font-weight: 600;
+      text-decoration: none;
+      color: var(--clr-primary-100);
+      font-weight: 700;
+      font-size: 13px;
+    }
+
+    .payment-button:hover {
+      background-color: #2d13be;
+      cursor: pointer;
+    }
+
+  }
+
+
+  .cancel {
+    margin: 25px 0;
+
+    a {
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 13px;
+      color: var(--clr-neutral-300);
     }
   }
 
-
-}
-
-.payment-button {
-  background-color: var(--clr-primary-500);
-  border-radius: 8px;
-  border: none;
-  padding: 12px 0;
-  box-shadow: 0px 15px 25px #b0bad9;
-  width: 80%;
-  margin: auto;
-
-  a {
-    text-decoration: none;
-    color: var(--clr-primary-100);
-    font-weight: 700;
-    font-size: 13px;
-  }
-
-  .payment-button:hover {
-    background-color: #2d13be;
-    cursor: pointer;
-  }
-  
 }
 
 
-.cancel {
-  margin: 25px 0;
-
-  a {
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 13px;
-    color: var(--clr-neutral-300);
-  }
-}
 
 
 
@@ -160,4 +165,67 @@ body {
   }
 }
 
-/*# sourceMappingURL=styles.scss.map */
+@media screen and (max-width: 480px) {
+  .content-container {
+    width: 70vw;
+    
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .content-container {
+    width: 60vw;
+    margin-top: 70px;
+    margin-bottom: auto;
+    margin: 15% 3% 3% 3%;
+
+
+    .main {
+      .annual-plan {
+       
+
+        .container {
+
+
+          img {
+            width: 63px;
+            height: 63px;
+          }
+
+          h2 {
+
+            font-size: 15px;
+
+          }
+
+          p {
+
+            font-size: 15px;
+
+
+            
+          }
+          a {
+            font-size: 15px;
+
+          }
+
+
+        }
+      }
+    }
+  }
+
+}
+
+
+@media screen and (max-width: 1024px) {
+  .content-container {
+    width: 60vw;
+    margin-top: 70px;
+    margin-bottom: auto;
+    margin: 15% 3% 3% 3%;
+
+  }
+
+}
